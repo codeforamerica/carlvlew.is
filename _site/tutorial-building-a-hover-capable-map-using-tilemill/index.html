@@ -36,8 +36,8 @@
 <meta property="og:title" content="Tutorial: Building a hover-enabled map using Tilemill">
 
 
-  <link rel="canonical" href="http://localhost:4000/tutorial-building-a-hover-capable-map-using-tilemill/">
-  <meta property="og:url" content="http://localhost:4000/tutorial-building-a-hover-capable-map-using-tilemill/">
+  <link rel="canonical" href="http://localhost:4000/carlvlew.is/tutorial-building-a-hover-capable-map-using-tilemill/">
+  <meta property="og:url" content="http://localhost:4000/carlvlew.is/tutorial-building-a-hover-capable-map-using-tilemill/">
 
 
 
@@ -84,7 +84,7 @@
       "@context" : "http://schema.org",
       "@type" : "Person",
       "name" : "@carlvlewis",
-      "url" : "http://localhost:4000",
+      "url" : "http://localhost:4000/carlvlew.is",
       "sameAs" : null
     }
   </script>
@@ -97,7 +97,7 @@
 <!-- end SEO -->
 
 
-<link href="http://localhost:4000/feed.xml" type="application/atom+xml" rel="alternate" title="carlvlew.is Feed">
+<link href="http://localhost:4000/carlvlew.is/feed.xml" type="application/atom+xml" rel="alternate" title="carlvlew.is Feed">
 
 <!-- http://t.co/dKP3o1e -->
 <meta name="HandheldFriendly" content="True">
@@ -109,7 +109,7 @@
 </script>
 
 <!-- For all browsers -->
-<link rel="stylesheet" href="http://localhost:4000/assets/css/main.css">
+<link rel="stylesheet" href="http://localhost:4000/carlvlew.is/assets/css/main.css">
 
 <!--[if lte IE 9]>
   <style>
@@ -153,32 +153,32 @@
   <div class="masthead__inner-wrap">
     <div class="masthead__menu">
       <nav id="site-nav" class="greedy-nav">
-        <a class="site-title" href="http://localhost:4000/">carlvlew.is</a>
+        <a class="site-title" href="http://localhost:4000/carlvlew.is/">carlvlew.is</a>
         <ul class="visible-links">
           
             
-            <li class="masthead__menu-item"><a href="http://localhost:4000/about/">About</a></li>
+            <li class="masthead__menu-item"><a href="http://localhost:4000/carlvlew.is/about/">About</a></li>
           
             
-            <li class="masthead__menu-item"><a href="http://localhost:4000/reporting/">News Writing</a></li>
+            <li class="masthead__menu-item"><a href="http://localhost:4000/carlvlew.is/reporting/">News Writing</a></li>
           
             
-            <li class="masthead__menu-item"><a href="http://localhost:4000/portfolio/">Portfolio</a></li>
+            <li class="masthead__menu-item"><a href="http://localhost:4000/carlvlew.is/portfolio/">Portfolio</a></li>
           
             
-            <li class="masthead__menu-item"><a href="http://localhost:4000/testimonials/">Testimonials</a></li>
+            <li class="masthead__menu-item"><a href="http://localhost:4000/carlvlew.is/testimonials/">Testimonials</a></li>
           
             
-            <li class="masthead__menu-item"><a href="http://localhost:4000/resources/">Resources</a></li>
+            <li class="masthead__menu-item"><a href="http://localhost:4000/carlvlew.is/resources/">Resources</a></li>
           
             
-            <li class="masthead__menu-item"><a href="http://localhost:4000/research/">Research</a></li>
+            <li class="masthead__menu-item"><a href="http://localhost:4000/carlvlew.is/research/">Research</a></li>
           
             
             <li class="masthead__menu-item"><a href="http://cv.carlvlewis.net">CV</a></li>
           
             
-            <li class="masthead__menu-item"><a href="http://localhost:4000/other-projects/">Other Projects</a></li>
+            <li class="masthead__menu-item"><a href="http://localhost:4000/carlvlew.is/other-projects/">Other Projects</a></li>
           
         </ul>
         <button><div class="navicon"></div></button>
@@ -411,7 +411,7 @@
 </ul>
 <h2><strong>1. Gathering and preparing the data</strong></h2>
 <p>The first thing you'll need to do is locate your data and parse it down to a format in which it can be easily visualized. For this example, we're using population estimates from the U.S. Census Bureau, which, luckily for us, has already done most of the heavy lifting analysis-wise. Download the data for Georgia or whatever other state you wish to visualize as a comma separated value (.csv) file from <a href="http://www.census.gov/popest/data/counties/totals/2011/CO-EST2011-03.html">this page</a>. Now you'll want to turn that .csv file into a Google spreadsheet. You can do this from the Google Drive dashboard by selecting Create&gt;Spreadsheet, then choosing File&gt;Import once your new spreadsheet opens. Locate and upload the .csv file. Select "Replace current spreadsheet" and set "Comma" as the separator character. Voila. Your data should then appear for each county. Here's what the correct options for that will look like:</p>
-<p><a href="http://carlvlewis.net/wp-content/uploads/2012/08/Screen-Shot-2012-08-07-at-6.55.50-PM.png"><img class="aligncenter size-full wp-image-3098" title="Screen Shot 2012-08-07 at 6.55.50 PM" src="/assets/Screen-Shot-2012-08-07-at-6.55.50-PM.png" alt="" width="600" height="450" /></a></p>
+<p><a href="http://carlvlewis.net/wp-content/uploads/2012/08/Screen-Shot-2012-08-07-at-6.55.50-PM.png"><img class="aligncenter size-full wp-image-3098" title="Screen Shot 2012-08-07 at 6.55.50 PM" src="/carlvlew.is/assets/Screen-Shot-2012-08-07-at-6.55.50-PM.png" alt="" width="600" height="450" /></a></p>
 <p>Given that each county has a different base population, the only standar way to compare en masse how many residents each county gained or lost is by calculating the percent change (see <a href="http://www.mathgoodies.com/lessons/percent/change.html">here</a> to figure out how to calculate that in Excel or Google Spreadsheets). In this example, however, the Census Bureau has already calculated out the percent change for us, making our job that much easier. Delete all the unnecessary columns from the spreadsheet, leaving only the county name in the first column, the 2010 and 2011 population totals in the second and third columns, and the "Percent" value in the fourth column (the "Percent" value refers to the percent change between the two years). Also make sure to delete any extra rows at the top or bottom of the spreadsheet, so that the first row contains the column titles, with the first county beginning on the second row and ending on the last row. Highlight the column containing the county names and select “Data&gt;Sort sheet by column, A-Z." This will put the entries in alphabetical order.</p>
 <p>If you happen to get a weird period ('.') preceding each county name as I did, you can get rid of it pretty easily by performing the following steps:</p>
 <ol>
@@ -421,18 +421,18 @@
 <li>Delete the first two columns so that the first column now becomes the county names only, free of the preceding periods.</li>
 </ol>
 <p>We're almost finished getting the data ready. All we have left to do is add in a column containing the official county codes for each county so that we'll have a common attribute with which we can merge the spreadsheet with the geometric data later. Download <a href="http://www.census.gov/popest/data/counties/totals/2011/files/CO-EST2011-Alldata.csv">this .csv</a> from the Census Bureau, which contains the county codes for all 50 states. Open it as a Google spreadsheet and delete all the rows except for the ones for the state you're visualizing. With only the rows for the state at hand remaining, highlight the "ctyname" column and select "Data&gt;Sort values from A-Z." This should reorder the spreadsheet to be exactly the same alphabetic order as the spreadsheet with the population totals. Copy the "county" column containing the numeric county codes, which should now also be arranged in numeric order, and paste it into a new column in the spreadsheet with the population totals, which should also be sorted alphabetically. This should now give you the correct county codes for each county in a new column. Title that column simply "COUNTY" (all-caps). For an idea of what things should look like at this point, check out my Google spreadsheet <a href="https://docs.google.com/spreadsheet/ccc?key=0Au4D8Alccn4xdGpUTGQwZUNUMnR4MUtRY2FNS0pBaEE">here</a>, or see the following screenshot:</p>
-<p><a href="http://carlvlewis.net/wp-content/uploads/2012/08/Screen-Shot-2012-08-06-at-1.41.32-AM.png"><img class="aligncenter size-full wp-image-3091" title="Screen Shot 2012-08-06 at 1.41.32 AM" src="/assets/Screen-Shot-2012-08-06-at-1.41.32-AM.png" alt="" width="589" height="495" /></a></p>
+<p><a href="http://carlvlewis.net/wp-content/uploads/2012/08/Screen-Shot-2012-08-06-at-1.41.32-AM.png"><img class="aligncenter size-full wp-image-3091" title="Screen Shot 2012-08-06 at 1.41.32 AM" src="/carlvlew.is/assets/Screen-Shot-2012-08-06-at-1.41.32-AM.png" alt="" width="589" height="495" /></a></p>
 <p>One last thing to keep in mind: If your county codes include values less than three digits, which they probably will, make sure any values less than three-digits long have 0s preceding them to force them to be three digits long (i.e. '001'). That way, it will match up with the three digit values in the geometric data later on in the process.</p>
 <p>Now that we have our population data ready, let's download the corresponding geometric county polygons from the Census Bureau <a href="http://www.census.gov/geo/www/cob/co2000.html">here</a>. For this tutorial we'll be using the shapefiles (.shp) format, so make sure to select the shp.zip option on the download page. I obviously used Georgia in this example; feel free to choose whatever other state you desire, so long as you follow the exact same instructions. Unzip the archive to your computer. You should see three files in the new unzipped folder: a .dbf, a .shp and a .shx. All we'll be need for this tutorial is the .shp file.</p>
 <p>At this point, you should have <strong>two different files</strong>: a Google spreadsheet of data formatted something like <a href="https://docs.google.com/spreadsheet/ccc?key=0Au4D8Alccn4xdGpUTGQwZUNUMnR4MUtRY2FNS0pBaEE">this</a>, and a shapefile of corresponding county polygons. The next step will be to take the population data and bind it to the shapefile so that the two match up.</p>
 <p>2. Binding the data to the shapefile using QGis</p>
 <p>Fire up QGis. Select the "Add Vector Layer" option from the top of the window and locate the .shp file you downloaded earlier. Open it in QGis and you should see a nice outline of your state that looks something like this:</p>
-<p><a href="http://carlvlewis.net/wp-content/uploads/2012/08/Screen-Shot-2012-08-05-at-10.20.45-PM.png"><img class="wp-image-3058 aligncenter" title="Screen Shot 2012-08-05 at 10.20.45 PM" src="/assets/Screen-Shot-2012-08-05-at-10.20.45-PM.png" alt="" width="526" height="350" /></a>Now go back to your newly created Google spreadsheet and export the data as a .csv by selecting "File&gt;Download data as." After downloading the .csv, rename it to something simple like "georgia.csv." The next thing we need to do is import the .csv into QGis. But before we can do that, we need to create a new '.csvt' file by the same name and in the same directory as the .csv that will tell QGis what type of data each column is (string, number, real, etc.). For this example, your '.csvt' file will look something <a href="https://docs.google.com/open?id=0B-4D8Alccn4xbnVVU2JyX3l1S0E">like this</a>, with a data type defining each column of the .csv:</p>
-<p><a href="http://carlvlewis.net/wp-content/uploads/2012/08/Screen-Shot-2012-08-05-at-10.39.32-PM.png"><img class="wp-image-3061 aligncenter" title="Screen Shot 2012-08-05 at 10.39.32 PM" src="/assets/Screen-Shot-2012-08-05-at-10.39.32-PM.png" alt="" width="611" height="454" /></a></p>
+<p><a href="http://carlvlewis.net/wp-content/uploads/2012/08/Screen-Shot-2012-08-05-at-10.20.45-PM.png"><img class="wp-image-3058 aligncenter" title="Screen Shot 2012-08-05 at 10.20.45 PM" src="/carlvlew.is/assets/Screen-Shot-2012-08-05-at-10.20.45-PM.png" alt="" width="526" height="350" /></a>Now go back to your newly created Google spreadsheet and export the data as a .csv by selecting "File&gt;Download data as." After downloading the .csv, rename it to something simple like "georgia.csv." The next thing we need to do is import the .csv into QGis. But before we can do that, we need to create a new '.csvt' file by the same name and in the same directory as the .csv that will tell QGis what type of data each column is (string, number, real, etc.). For this example, your '.csvt' file will look something <a href="https://docs.google.com/open?id=0B-4D8Alccn4xbnVVU2JyX3l1S0E">like this</a>, with a data type defining each column of the .csv:</p>
+<p><a href="http://carlvlewis.net/wp-content/uploads/2012/08/Screen-Shot-2012-08-05-at-10.39.32-PM.png"><img class="wp-image-3061 aligncenter" title="Screen Shot 2012-08-05 at 10.39.32 PM" src="/carlvlew.is/assets/Screen-Shot-2012-08-05-at-10.39.32-PM.png" alt="" width="611" height="454" /></a></p>
 <p>If you're having trouble with this part, download my .csvt <a href="https://docs.google.com/open?id=0B-4D8Alccn4xbnVVU2JyX3l1S0E">here</a>. Should you need to adjust the data types, just force open it in TextEdit and change them. The main two things to make sure is that the COUNTY column is defined as a string and the PERCENT column is defined as a value.</p>
 <p>Once your .csvt file has been placed in the same directory as your .csv, go back to QGis and add a new vector layer just as you did before with the shapefile. This time, locate the .csv file and open it. QGis should then automatically detect the .csvt file in the background and assign the appropriate data types to each column in the .csv. To make sure this worked correctly, you can control-click the new .csv vector layer and select "Properties&gt;Fields" to check that each field has the appropriate data type.</p>
 <p>Now you can get down to the business of binding the data from the .csv to the shapefile. Select the shapefile layer and go to "Properties&gt;Joins." Add a new vector join, setting the .csv as the join layer and both the join field and the target field as COUNTY, like this:</p>
-<p><a href="http://carlvlewis.net/wp-content/uploads/2012/08/Screen-Shot-2012-08-05-at-10.57.51-PM.png"><img class="wp-image-3062 aligncenter" title="Screen Shot 2012-08-05 at 10.57.51 PM" src="/assets/Screen-Shot-2012-08-05-at-10.57.51-PM.png" alt="" width="532" height="355" /></a></p>
+<p><a href="http://carlvlewis.net/wp-content/uploads/2012/08/Screen-Shot-2012-08-05-at-10.57.51-PM.png"><img class="wp-image-3062 aligncenter" title="Screen Shot 2012-08-05 at 10.57.51 PM" src="/carlvlew.is/assets/Screen-Shot-2012-08-05-at-10.57.51-PM.png" alt="" width="532" height="355" /></a></p>
 <p>Applying the join should merge your spreadsheet and shapefile, binding the population data to the polygons using the shared "COUNTY"attribute that contains the matching county codes. To check and make sure everything worked correctly, control-click the shapefile vector layer in QGis and select "Open attribute table." You should see the population data attached as columns to the end of the attribute table.</p>
 <p>Once you've ensured that the data has been attached to the polygon vector layer, you can now export the new shapefile by control-clicking the shapefile vector layer, selecting "Save as," and saving the layer in the ESRI Shapefile format. Now you're ready to compress the shapefile package into a .zip and import it into Tilemill. where you can style it, add interactivity and more.</p>
 <p>3. Styling the map in Tilemill</p>
@@ -492,7 +492,7 @@
 </pre>
 <p>As you can see, the first set of paramaters defines the style attributes of the entire polygon, including the line width and the opacity of the #georgia layer. The following sets of paramaters all set the fill color of individual 'buckets,' sorted by the value of the PERCENT field.</p>
 <p>Now, add layers for the surrounding geographical and cultural features, including roads, populated places, rivers, and surrounding states. When selecting the file source for your new layer, click "Browse&gt;MapBox" to add predefined features from MapBox. Use the same method to style those layers as you did with the primary shapefile layer, pressing Command + S to save the map and refresh the view. Here's what my styled map ended up looking like:</p>
-<p><a href="http://carlvlewis.net/wp-content/uploads/2012/08/Screen-Shot-2012-08-05-at-11.31.40-PM.png"><img class="aligncenter size-full wp-image-3066" title="Screen Shot 2012-08-05 at 11.31.40 PM" src="/assets/Screen-Shot-2012-08-05-at-11.31.40-PM.png" alt="" width="528" height="312" /></a></p>
+<p><a href="http://carlvlewis.net/wp-content/uploads/2012/08/Screen-Shot-2012-08-05-at-11.31.40-PM.png"><img class="aligncenter size-full wp-image-3066" title="Screen Shot 2012-08-05 at 11.31.40 PM" src="/carlvlew.is/assets/Screen-Shot-2012-08-05-at-11.31.40-PM.png" alt="" width="528" height="312" /></a></p>
 <p>4. Adding the mouseover tooltips<br />
 In Tilemill, navigate to the Templates panel. Select "Teaser." This is the field that defines what appears in the tooltip that appears when the user moves the mouse over each polygon. Basically, all you have to do is format the field to correspond to the values in your data.</p>
 <p>Here's the formatting I used:</p>
@@ -503,7 +503,7 @@ In Tilemill, navigate to the Templates panel. Select "Teaser." This is the field
 <div>2010 Population: 2010</div>
 <div>2011 Population: 2011</div>
 <p>That produced the following tooltip:<br />
-<a href="http://carlvlewis.net/wp-content/uploads/2012/08/Screen-Shot-2012-08-06-at-12.32.36-AM.png"><img class="aligncenter size-full wp-image-3071" title="Screen Shot 2012-08-06 at 12.32.36 AM" src="/assets/Screen-Shot-2012-08-06-at-12.32.36-AM.png" alt="" width="318" height="127" /></a></p>
+<a href="http://carlvlewis.net/wp-content/uploads/2012/08/Screen-Shot-2012-08-06-at-12.32.36-AM.png"><img class="aligncenter size-full wp-image-3071" title="Screen Shot 2012-08-06 at 12.32.36 AM" src="/carlvlew.is/assets/Screen-Shot-2012-08-06-at-12.32.36-AM.png" alt="" width="318" height="127" /></a></p>
 <p>As you can see, I used simple HTML markup, including the bold and horizontal line tags to add style elements. Each instance of } corresponds to a column name from the shapefile, and calls it up in the tooltip. So, to call up the percent change, I typed , which refers to the PERCENT column from our data. Upon saving this, you'll see that the tooltip appears however you format it. The possibilities here really abound.</p>
 <p>5. Adding a legend</p>
 <p>You can add a custom legend to map in much the same way. While you're still in the Templates panel, select "Legend." This allows you to use basic HTML/CSS both to define the structure and style of your legend, as well as the position of both the legend and the tooltip. Here's a look at how I formatted the "Legend" field to produce my map:</p>
@@ -531,12 +531,12 @@ In Tilemill, navigate to the Templates panel. Select "Teaser." This is the field
 </div>
 <pre class="html"></pre>
 <p>If you know rudimentary HTML/CSS, it's pretty easy to tell what's going on above. The background attribute corresponds to the color ramp I defined earlier in the style.mss field of Tilemill, and the HTML sets up the structure of the legend. After the HTML, I set some basic CSS styles, including the positioning of the legend and tooltips using the "margin" attribute and the font-size of the legend text. Save all that, and here's a glimpse of what you get:</p>
-<p><a href="http://carlvlewis.net/wp-content/uploads/2012/08/Screen-Shot-2012-08-06-at-12.49.58-AM.png"><img class="aligncenter size-full wp-image-3078" title="Screen Shot 2012-08-06 at 12.49.58 AM" src="/assets/Screen-Shot-2012-08-06-at-12.49.58-AM.png" alt="" width="599" height="699" /></a></p>
+<p><a href="http://carlvlewis.net/wp-content/uploads/2012/08/Screen-Shot-2012-08-06-at-12.49.58-AM.png"><img class="aligncenter size-full wp-image-3078" title="Screen Shot 2012-08-06 at 12.49.58 AM" src="/carlvlew.is/assets/Screen-Shot-2012-08-06-at-12.49.58-AM.png" alt="" width="599" height="699" /></a></p>
 <p>6. Exporting your map as MBTiles</p>
 <p>After you have the map styled to your liking in Tilemill, it's a fairly straightforward process to get the map on the Web. First, in the top right of Tilemill, select "Export" and choose "MBTiles." This is the format for the tiles that you'll need to host the map on MapBox. Once the export panel appears, set the starting center point (for my map, it was -83.562,32.9349,6), as well as the bounds. Keep in mind that the smaller the bounds, the less tiles your map needs to render and, thus, the faster it will load. Only include the bounds you need in the map so as to minimize load time. Give the map a name, a brief description, and be sure to attribute the data source. Once you're finished, click "Export" and save your map in the directory of your choice. The resulting .MBTiles file will now go directly into MapBox, where your map will be hosted.</p>
 <p>7. Uploading your map to MapBox</p>
 <p>The final step in making your map viewable by the world involves uploading the .MBTiles file you just exported to MapBox. Create a MapBox account and select the option to upload a new map. Locate your .MBTiles file and upload it to MapBox. Once it's finshed you'll see a preview of the map that looks like this:</p>
-<p><a href="http://carlvlewis.net/wp-content/uploads/2012/08/Screen-Shot-2012-08-06-at-12.59.06-AM.png"><img class="aligncenter size-full wp-image-3080" title="Screen Shot 2012-08-06 at 12.59.06 AM" src="/assets/Screen-Shot-2012-08-06-at-12.59.06-AM.png" alt="" width="515" height="393" /></a></p>
+<p><a href="http://carlvlewis.net/wp-content/uploads/2012/08/Screen-Shot-2012-08-06-at-12.59.06-AM.png"><img class="aligncenter size-full wp-image-3080" title="Screen Shot 2012-08-06 at 12.59.06 AM" src="/carlvlew.is/assets/Screen-Shot-2012-08-06-at-12.59.06-AM.png" alt="" width="515" height="393" /></a></p>
 <p>Enable the "Map Details" view. Set the map to "Public," and make sure the Zoom, Legend, Scroll zoom and Tooltip options are selected. Deselect the "Share links" option. Then click embed, and copy the embed code to use the map wherever you please.</p>
 <p>Just to give you a live view of how the finished map looks and behaves:</p>
 <p><iframe src="http://a.tiles.mapbox.com/v3/carlvlewis.315301.html#7/33.514/-82.573" width="600" height="700" frameborder="0"></iframe></p>
@@ -562,24 +562,24 @@ In Tilemill, navigate to the Templates panel. Select "Teaser." This is the field
     <h4 class="page__share-title">Share on</h4>
   
 
-  <a href="https://twitter.com/intent/tweet?via=carlvlewis&text=Tutorial: Building a hover-enabled map using Tilemill http://localhost:4000/tutorial-building-a-hover-capable-map-using-tilemill/" class="btn btn--twitter" title="Share on Twitter"><i class="fa fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+  <a href="https://twitter.com/intent/tweet?via=carlvlewis&text=Tutorial: Building a hover-enabled map using Tilemill http://localhost:4000/carlvlew.is/tutorial-building-a-hover-capable-map-using-tilemill/" class="btn btn--twitter" title="Share on Twitter"><i class="fa fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
 
-  <a href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:4000/tutorial-building-a-hover-capable-map-using-tilemill/" class="btn btn--facebook" title="Share on Facebook"><i class="fa fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+  <a href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:4000/carlvlew.is/tutorial-building-a-hover-capable-map-using-tilemill/" class="btn btn--facebook" title="Share on Facebook"><i class="fa fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
 
-  <a href="https://plus.google.com/share?url=http://localhost:4000/tutorial-building-a-hover-capable-map-using-tilemill/" class="btn btn--google-plus" title="Share on Google Plus"><i class="fa fa-fw fa-google-plus" aria-hidden="true"></i><span> Google+</span></a>
+  <a href="https://plus.google.com/share?url=http://localhost:4000/carlvlew.is/tutorial-building-a-hover-capable-map-using-tilemill/" class="btn btn--google-plus" title="Share on Google Plus"><i class="fa fa-fw fa-google-plus" aria-hidden="true"></i><span> Google+</span></a>
 
-  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http://localhost:4000/tutorial-building-a-hover-capable-map-using-tilemill/" class="btn btn--linkedin" title="Share on LinkedIn"><i class="fa fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http://localhost:4000/carlvlew.is/tutorial-building-a-hover-capable-map-using-tilemill/" class="btn btn--linkedin" title="Share on LinkedIn"><i class="fa fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
 </section>
 
 
       
   <nav class="pagination">
     
-      <a href="http://localhost:4000/introducing-the-new-dosavannah-com-and-do-mobile-app/" class="pagination--pager" title="Why we built the new dosavannah.com and Do mobile app
+      <a href="http://localhost:4000/carlvlew.is/introducing-the-new-dosavannah-com-and-do-mobile-app/" class="pagination--pager" title="Why we built the new dosavannah.com and Do mobile app
 ">Previous</a>
     
     
-      <a href="http://localhost:4000/so-long-savannah-and-a-new-entrepreneurial-path/" class="pagination--pager" title="So long, Savannah, and a new entrepreneurial path
+      <a href="http://localhost:4000/carlvlew.is/so-long-savannah-and-a-new-entrepreneurial-path/" class="pagination--pager" title="So long, Savannah, and a new entrepreneurial path
 ">Next</a>
     
   </nav>
@@ -613,7 +613,47 @@ In Tilemill, navigate to the Templates panel. Select "Teaser." This is the field
     
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="http://localhost:4000/zircle-for-ecosystem-mapping/" rel="permalink">Zircle For Ecosystem Mapping
+        <a href="http://localhost:4000/carlvlew.is/on-winning-a-code-for-america-fellowship/" rel="permalink">On being accepted as a 2019 Code for America fellow
+</a>
+      
+    </h2>
+    <p  class="page__meta">
+  
+    <span><i class="fa fa-clock-o" aria-hidden="true"></i>
+
+
+
+
+  5 minute read
+</span>,
+  
+  
+    Posted on 
+    <span>June 05, 2019</span>,
+  
+   
+    by <span>Carl V. Lewis</span>
+  
+</p>
+    <p class="archive__item-excerpt" itemprop="description">
+      
+        For as long as I’ve been working at the intersection of social impact and data and UX design, I’ve dreamed of being a Code for America Fellow.
+
+      
+    </p>
+  </article>
+</div>
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="http://localhost:4000/carlvlew.is/zircle-for-ecosystem-mapping/" rel="permalink">Zircle For Ecosystem Mapping
 </a>
       
     </h2>
@@ -653,7 +693,7 @@ In Tilemill, navigate to the Templates panel. Select "Teaser." This is the field
     
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="http://localhost:4000/range-plots-to-visualize-opinion-gaps/" rel="permalink">Range plots ≠ dot plots
+        <a href="http://localhost:4000/carlvlew.is/range-plots-to-visualize-opinion-gaps/" rel="permalink">Range plots ≠ dot plots
 </a>
       
     </h2>
@@ -693,7 +733,7 @@ In Tilemill, navigate to the Templates panel. Select "Teaser." This is the field
     
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="http://localhost:4000/my-week-at-openvisconf-2017-in-tweets/" rel="permalink">My week at OpenVisConf 2017 in tweets – or, how I learned to stop hating and be okay with Tableau
+        <a href="http://localhost:4000/carlvlew.is/my-week-at-openvisconf-2017-in-tweets/" rel="permalink">My week at OpenVisConf 2017 in tweets – or, how I learned to stop hating and be okay with Tableau
 </a>
       
     </h2>
@@ -724,46 +764,6 @@ In Tilemill, navigate to the Templates panel. Select "Teaser." This is the field
   </article>
 </div>
         
-          
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title" itemprop="headline">
-      
-        <a href="http://localhost:4000/civic-tech-as-new-journalism/" rel="permalink">Surveying the intersectional identity of the data journalism and civic-tech ecosystems
-</a>
-      
-    </h2>
-    <p  class="page__meta">
-  
-    <span><i class="fa fa-clock-o" aria-hidden="true"></i>
-
-
-
-
-  6 minute read
-</span>,
-  
-  
-    Posted on 
-    <span>April 26, 2017</span>,
-  
-   
-    by <span>Carl V. Lewis</span>
-  
-</p>
-    <p class="archive__item-excerpt" itemprop="description">
-      
-        An explication of the interdisciplinary overlaps and differences between recent technology-driven social change movmements
-
-      
-    </p>
-  </article>
-</div>
-        
       </div>
     </div>
   
@@ -788,7 +788,7 @@ In Tilemill, navigate to the Templates panel. Select "Teaser." This is the field
       <li><a href="http://github.com/carlvlewis"><i class="fa fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
     
     
-    <li><a href="http://localhost:4000/feed.xml"><i class="fa fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    <li><a href="http://localhost:4000/carlvlew.is/feed.xml"><i class="fa fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
   </ul>
 </div>
 
@@ -796,7 +796,7 @@ In Tilemill, navigate to the Templates panel. Select "Teaser." This is the field
       </footer>
     </div>
 
-    <script src="http://localhost:4000/assets/js/main.min.js"></script>
+    <script src="http://localhost:4000/carlvlew.is/assets/js/main.min.js"></script>
 
 
 
