@@ -4,7 +4,7 @@ timezone: America/New_York
 locale: en
 title_separator: "-"
 name: "@carlvlewis"
-baseurl: "carlvlew.is"
+baseurl: "/carlvlew.is"
 url: ""
 repository: carlvlewis/carlvlew.is
 teaser:
@@ -98,6 +98,8 @@ author:
 include:
   - ".htaccess"
   - _pages
+  - images
+  - images/portfolio
 exclude:
   - "*.sublime-project"
   - "*.sublime-workspace"
